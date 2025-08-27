@@ -1,2 +1,2 @@
 # Lyriks
-Music Player
+A music player that works just like the popular Spotify!
