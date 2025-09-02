@@ -14,7 +14,7 @@ A fully functional music player app built with React, Redux Toolkit, and the Sha
 - Redux state management for active song and playback  
 
 ---
-![Home Screen](src/assets/screenshot1.png)
+![Home Screen](src/assets/homepage.png)
 
 
 ---
@@ -27,4 +27,5 @@ A fully functional music player app built with React, Redux Toolkit, and the Sha
 - **State Management:** Redux  
 
 ---
+
 
