@@ -12,11 +12,11 @@ const SongCard = ({ song, isPlaying, activeSong, i, data }) => {
   };
 
   const handlePlayClick = () => {
-    // Pass the raw song object to Redux
     dispatch(setActiveSong({ song, data, i }));
     dispatch(playPause(true));
   };
 
+  const songKey = song?.id;
   return (
     <div
       className="flex flex-col w-[250px] p-4 bg-white/5 bg-opacity-80 
@@ -49,10 +49,14 @@ const SongCard = ({ song, isPlaying, activeSong, i, data }) => {
 
       <div className="mt-4 flex flex-col">
         <p className="text-white font-semibold text-lg truncate">
-          <Link>{song.title || song.attributes?.name}</Link>
+          <Link to={`/songs/${songKey}`}>
+            {song.title || song.attributes?.name}
+          </Link>
         </p>
         <p className="text-gray-300 text-sm truncate mt-1">
-          <Link>{song.subtitle || song.attributes?.artistName}</Link>
+          <Link to={`/artists/${song?.artists?.[0]?.adamid}`}>
+            {song.subtitle || song.attributes?.artistName}
+          </Link>
         </p>
       </div>
     </div>
